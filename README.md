@@ -1,5 +1,6 @@
-## MERN_Project_CRUD_&_Pagination explain
-#### Server code: https://github.com/mnaofficialbd/mern_crud_pagination_server
+## Power_Hack
+### CRUD_&_Pagination explain in power_hack MERN_Project
+#### Server code: https://github.com/mnaofficialbd/power-hack-server
 ### Technology:
 
 #### `Frontend`
