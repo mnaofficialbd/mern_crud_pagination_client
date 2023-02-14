@@ -5,13 +5,13 @@ import { toast } from "react-toastify";
 const AllProducts = () => {
 
     const [products, setProducts] = useState([]);
-    const [page, setPage] = useState(5);
+    const [limit, setLimit] = useState(5);
 
     useEffect(() => {
         // query paremiter
 
         (async () => {
-            const { data } = await axios.get(`http://localhost:5000/products?limit=10`);
+            const { data } = await axios.get(`http://localhost:5000/products?limit=${limit}&pageNumber=0`);
 
             if (!data?.success) return toast.error(data.error)
             setProducts(data?.data)
@@ -63,12 +63,17 @@ const AllProducts = () => {
             </table>
             <div className='mt-5 flex justify-end'>
                 {
-                    [...Array(page).keys()].map(number => (
+                    [...Array(5).keys()].map(number => (
                         <div className="btn-group">
-                            <button className="btn btn-sm mx-2">{number+1}</button>
+                            <button className="btn btn-sm mx-2">{number + 1}</button>
                         </div>
                     ))
                 }
+                <select>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
             </div>
         </div>
     );
