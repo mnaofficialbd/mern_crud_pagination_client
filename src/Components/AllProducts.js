@@ -6,17 +6,18 @@ const AllProducts = () => {
 
     const [products, setProducts] = useState([]);
     const [limit, setLimit] = useState(5);
+    const [pageNumber, setPageNumber]=useState(0);
 
     useEffect(() => {
         // query paremiter
 
         (async () => {
-            const { data } = await axios.get(`http://localhost:5000/products?limit=${limit}&pageNumber=0`);
+            const { data } = await axios.get(`http://localhost:5000/products?limit=${limit}&pageNumber=${pageNumber}`);
 
             if (!data?.success) return toast.error(data.error)
             setProducts(data?.data)
         })()
-    }, [])
+    }, [limit,pageNumber])
 
     return (
         <div className="py-5 px-5 w-screen">
@@ -69,7 +70,7 @@ const AllProducts = () => {
                         </div>
                     ))
                 }
-                <select>
+                <select onChange={(e)=>setLimit(e.target.value)} className="btn btn-secondary btn-sm mx-2">
                     <option value="5">5</option>
                     <option value="10">10</option>
                     <option value="15">15</option>
