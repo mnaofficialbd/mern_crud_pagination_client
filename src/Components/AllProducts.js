@@ -11,7 +11,10 @@ const AllProducts = () => {
     useEffect(() => {
         (async () => {
             const { data } = await axios.get(`http://localhost:5000/products?limit=${limit}&pageNumber=${pageNumber}`);
-            if (!data?.success) return toast.error(data.error)
+            if (!data?.success) {
+                setProducts([]);
+                return toast.error(data.error)
+            }
             setProducts(data?.data)
         })()
     }, [limit, pageNumber])
@@ -29,7 +32,7 @@ const AllProducts = () => {
                 </thead>
                 <tbody>
                     {
-                        products?.map(product => (
+                        products?.length ? products?.map(product => (
                             <tr>
                                 <td>{product?.name}</td>
                                 <td>{product?.price}</td>
@@ -52,21 +55,23 @@ const AllProducts = () => {
                                     </div>
                                 </td>
                             </tr>
-                        ))
+                        )) : (<div>
+                            <h2 className="text-red-700 text-center text-5xl font-bold">No Products Found</h2>
+                        </div>)
                     }
                 </tbody>
             </table>
             <div className='mt-5 flex justify-end'>
                 {
-                    [...Array(5).keys()]
-                    .map(number => (
-                        <div className="btn-group">
-                            <button
-                                onClick={() =>setPageNumber(number)}
-                                className={`btn btn-sm mx-2 ${pageNumber===number? "btn-primary":"btn"}`}
-                            >{number + 1}</button>
-                        </div>
-                    ))
+                    [...Array(3).keys()]
+                        .map(number => (
+                            <div className="btn-group">
+                                <button
+                                    onClick={() => setPageNumber(number)}
+                                    className={`btn btn-sm mx-2 ${pageNumber === number ? "btn-primary" : "btn"}`}
+                                >{number + 1}</button>
+                            </div>
+                        ))
                 }
                 <select
                     onChange={(e) => setLimit(e.target.value)}
