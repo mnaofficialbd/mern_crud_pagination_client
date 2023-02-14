@@ -1,0 +1,57 @@
+[
+    {
+        "name": "iPhone 14 Pro",
+        "price": "999",
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone14pro-digitalmat-gallery-2-202209?wid=728&hei=666&fmt=png-alpha&.v=1660830896841"
+    },
+    {
+        "name": "iphone 14",
+        "price": "799",
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone14-digitalmat-gallery-3-202209?wid=728&hei=666&fmt=png-alpha&.v=1662055813794"
+    },
+    {
+        "name": "iPhone 14 Pro Max",
+        "price": "1099",
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone14promax-digitalmat-gallery-5-202209?wid=728&hei=666&fmt=png-alpha&.v=1663346233369"
+    },
+    {
+        "name": "iPhone 13",
+        "price": "699",
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone13-digitalmat-gallery-2-202203?wid=728&hei=666&fmt=png-alpha&.v=1644988764167"
+    },
+    {
+        "name": "iPhone 12",
+        "price": "599",
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone12-digitalmat-gallery-2-202111?wid=728&hei=666&fmt=png-alpha&.v=1635178709000"
+    },
+    {
+        "name": "iPhone 14 Plus",
+        "price": "899",
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone14plus-digitalmat-gallery-3-202209?wid=728&hei=666&fmt=png-alpha&.v=1662055814336"
+    },
+    {
+        "name": "iPhone 13 mini",
+        "price": "599",
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone13mini-digitalmat-gallery-3-202203?wid=728&hei=666&fmt=png-alpha&.v=1644988970320"
+    },
+    {
+        "name": "iPad Pro",
+        "price": "799",
+        "image": "https://www.apple.com/v/ipad-pro/al/images/overview/hero/hero__gb2msr725aa2_large_2x.jpg"
+    },
+    {
+        "name": "Samsung Galaxy S23 Ultra",
+        "price": "485",
+        "image": "https://www.mobiledokan.com/wp-content/uploads/2023/02/Samsung-Galaxy-S23-Ultra.jpg"
+    },
+    {
+        "name": "iPad Air",
+        "price": "599",
+        "image": "https://www.apple.com/v/ipad-air/s/images/overview/features/iris__fnhnshkpwl6y_large_2x.jpg"
+    },
+    {
+        "name": "Vivo Y16",
+        "price": "459",
+        "image": "https://www.mobiledokan.com/wp-content/uploads/2023/01/Vivo-Y16.jpg"
+    }
+]

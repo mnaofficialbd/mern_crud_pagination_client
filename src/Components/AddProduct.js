@@ -10,17 +10,17 @@ const AddProduct = () => {
             image: e.target.image.value,
         };
 
-        /* try {
-            const { data } = await axios.post("http://localhost:5000/", product);
+        try {
+            const { data } = await axios.post("http://localhost:5000/products", product);
             if (!data.success) {
                 return toast.error(data.error)
             }
             toast.success(data.message)
         } catch (error) {
             console.log(error);
-        } */
+        }
 
-        console.log(product);
+        // console.log(product);
     };
     return (
         <div className="py-32 px-10 min-h-screen w-full">
