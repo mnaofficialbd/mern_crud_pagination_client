@@ -7,6 +7,7 @@ const AllProducts = () => {
     const [products, setProducts] = useState([]);
     const [limit, setLimit] = useState(5);
     const [pageNumber, setPageNumber] = useState(0);
+    const [totalPage, setTotalPage] = useState(0);
 
     useEffect(() => {
         (async () => {
@@ -15,7 +16,8 @@ const AllProducts = () => {
                 setProducts([]);
                 return toast.error(data.error)
             }
-            setProducts(data?.data)
+            setProducts(data?.data);
+            setTotalPage(data?.count / limit);
         })()
     }, [limit, pageNumber])
 
@@ -63,7 +65,7 @@ const AllProducts = () => {
             </table>
             <div className='mt-5 flex justify-end'>
                 {
-                    [...Array(3).keys()]
+                    [...Array(totalPage).keys()]
                         .map(number => (
                             <div className="btn-group">
                                 <button
@@ -74,6 +76,7 @@ const AllProducts = () => {
                         ))
                 }
                 <select
+                    defaultValue={limit}
                     onChange={(e) => setLimit(e.target.value)}
                     className="btn btn-secondary btn-sm mx-2">
                     <option value="5">5</option>
